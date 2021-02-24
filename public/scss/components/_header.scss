@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: rgba($color: #161a1a, $alpha: 0.3);
+  &__row {
+    padding: 25px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
+    align-items: center;
+  }
+  &__nav {
+    margin-right: 60px;
+  }
+  &__item {
+    margin-right: 40px;
+    font-size: 18;
+    font-weight: bold;
+    line-height: 1.2;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__btn {
+    margin-right: 20px;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: 0.3s;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background: #ffffff;
+      color: #161a1a;
+    }
+  }
+}

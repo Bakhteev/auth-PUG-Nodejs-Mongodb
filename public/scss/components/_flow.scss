@@ -1,0 +1,21 @@
+.flow {
+  padding: 76px 0 110px;
+  &__item{
+    padding-left: 200px;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 0.64;
+    img{
+      margin-right: 23px;
+    }
+  }
+  &__description{
+    font-size: 20px;
+    line-height: 1.75;
+  }
+}

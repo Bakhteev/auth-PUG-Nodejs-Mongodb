@@ -1,0 +1,20 @@
+.listen {
+  height: 640px;
+  background: url('../img/listen.png') no-repeat center;
+  background-size: cover;
+  &__text-block {
+    max-width: 33%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 0.94;
+  }
+  &__description {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+}

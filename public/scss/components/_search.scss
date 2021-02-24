@@ -1,0 +1,22 @@
+.search {
+  padding: 44px 0 100px;
+  &__text-block {
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 0.94;
+    margin-bottom: 50px;
+  }
+  &__description {
+    max-width: 64%;
+    font-size: 20px;
+    line-height: 1.75;
+    span {
+      color: #2dceef;
+    }
+  }
+}

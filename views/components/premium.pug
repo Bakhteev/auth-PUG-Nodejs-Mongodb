@@ -1,0 +1,43 @@
+mixin card(title, price, arr, premiumText)
+  if premiumText 
+    .premium__card.card.card--blue.flex 
+      h6.card__title #{title}
+      p.card__price 
+        span.blue $ #{price}
+        | /month
+      span.card__description.m75 #{premiumText}
+      ul.card__list
+        each item in arr
+          li.flex.card__item.card__item--blue #{item}
+  else 
+    .premium__card.card.flex 
+      h6.card__title #{title}
+      p.card__price.m75  
+        span $ #{price}
+        | /month
+      ul.card__list
+        each item in arr
+          li.flex.card__item #{item}
+            
+
+- const iconsArr = [{icon:'/img/Offline.png',title:'Offline mode.',description:'Save and listen anywhere.'},{icon:'/img/HQ.png',title:'High quality audio.',description:'Enjoy the full range of sound.'},{icon:'/img/NoADS.png',title:'No ads.',description:'Enjoy nonstop music.'},{icon:'/img/UnlimSkips.png',title:'Unlimited skips.',description:'Just tap skip.'}]
+- const freeArr = ['Online listening', 'Regular audio', 'With advertising', '30 skips per day', ]
+- const premiumArr = ['Offline mode', 'High quality audio', 'No ads', 'Unlimited skips',]
+
+
+section.premium
+  .container--small
+    h2.premium__title Why go Premium?   
+    ul.premium__list.list.flex
+      each icon in iconsArr
+        li.premium__item.flex
+          img(src=icon.icon, alt="")
+          h6.list__title #{icon.title}
+          span.list__description #{icon.description} 
+    h6.premium__title--small Listen free or subscribe to MusicBox Premium.
+    .row.premium__row.premium__row--top  
+      +card('MusicBox Free','0.00',freeArr)
+      +card('MusicBox Premium',7.99,premiumArr,'Start with 1-month free trial*')
+    .row.premium__row.premium__row--bottom 
+      a(href="").premium__link GET MUSICBOX FREE
+      a(href="").premium__link.premium__link--premium GET MUSICBOX PREMIUM
