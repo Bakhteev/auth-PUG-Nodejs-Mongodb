@@ -1,0 +1,16 @@
+- const items = [{link: '#', text:'Download'},{link: '#', text:'Help'}]
+
+header.header
+  .container 
+    .row.header__row
+      .logo
+        a(href="/").logo__link
+          img(src="/img/logo.png", alt="").logo__img
+      nav.header__nav 
+        ul.flex
+          each item in items
+            li.header__item
+              a(href=item.link).header__link #{item.text}
+      .header__right 
+        button Log in
+        button Sign up
