@@ -217,6 +217,7 @@ input {
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 45px;
 }
 
 .login__row {
@@ -225,6 +226,7 @@ input {
 }
 
 .login__row--bottom {
+  margin: 20px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -275,6 +277,27 @@ input {
           align-items: center;
 }
 
+.login__btn {
+  width: 207px;
+  padding: 12px 0;
+  background: #2d9bef;
+  border-radius: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.login__forgot {
+  line-height: 1.2;
+  font-size: 12px;
+  text-align: center;
+  color: #2d9bef;
+}
+
+.label {
+  margin-top: 35px;
+}
+
 .label__text {
   position: absolute;
   z-index: 1;
@@ -283,16 +306,38 @@ input {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .label__input {
-  padding: 20px;
+  padding: 20px 20px 15px;
   border: 1px solid black;
   border-radius: 4px;
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
-.label__input:focus {
-  border-color: #2D9BEF;
+.label__input:focus, .label__input.active {
+  border-color: #2d9bef;
+}
+
+.label__input:focus + .label__text, .label__input.active + .label__text {
+  top: 20%;
+  font-size: 11px;
+  color: #898b91;
+}
+
+.label.active .label__text {
+  top: 20%;
+  font-size: 11px;
+  color: #898b91;
 }

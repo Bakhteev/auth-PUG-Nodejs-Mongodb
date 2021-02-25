@@ -3,7 +3,7 @@ section.signup
     .signup__inner.flex.h-100
       .signup__card
         button &times; 
-        h1.signup__title What will you listen to today?
+        h1.signup__title Ready to sign up?
         .row.signup__row 
           a(href="").signup__link.signup__link--blue.flex
             img(src="/img/facebook.svg", alt="") 
@@ -22,18 +22,16 @@ section.signup
             input(type="text" name="name", id="name").label__input
             span.label__text Username
           .row.signup__row--bottom 
-            label(for="loginCheckbox").flex
-              input(type="checkbox", name="", id="loginCheckbox")
-              | Remember me
-            button(type="submit") Log in
-            select(name="") 
+            select(name="dateOfBirthday") 
               option date of birthday
               option date of birthday
-            select(name="")
+            select(name="gender")
               option gender
               option female
               option male
-        .flex.signup__text-block
-          a(href="#") Forgot your password?
-          span Don't have an account?
-          a(href="/signup") SIGN UP FOR MUSICBOX
+          .flex.signup__text-block
+            p(style="text-align: center") By clicking on "Sign up", you accept the <br/>
+              span Terms and Conditions of Use.
+          button(type="submit").signup__btn SIGN UP
+          a(href="/login").signup__relocate Already have an account? 
+            span Log in
