@@ -1,0 +1,10 @@
+extends ../layout/layout.pug
+
+block variables
+  - const title = 'Login'
+  - const css = '/css/signup.css'
+
+block content
+  include ../components/header.pug
+  main
+    include ../components/signupForm.pug

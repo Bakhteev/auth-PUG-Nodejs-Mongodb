@@ -1,4 +1,5 @@
 .premium {
+  margin-bottom: 170px;
   &__title {
     font-size: 36px;
     line-height: 1.22;
@@ -18,14 +19,15 @@
     align-items: center;
   }
   &__row {
-    
-    &--top {
-      margin: 40px 0 30px;
-      justify-content: space-evenly;
-    }
-    &--bottom {
-      justify-content: space-around;
-    }
+    padding: 0 80px;
+    // margin: 0 -25px;
+    // justify-content: center;
+  }
+  &__col{
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+
   }
   &__link {
     padding: 15px 32px;
@@ -36,10 +38,8 @@
     line-height: 19px;
     text-align: center;
     box-sizing: border-box;
-    margin-left: 40px;
     &--premium {
       position: relative;
-      
       background: linear-gradient(to left, #9b2def, #2d9bef, #35edfb);
       border: none;
     }
@@ -58,8 +58,9 @@
   }
 }
 .card {
-  min-width: 320px;
-  max-height: 354px;
+  max-width: 320px;
+  min-height: 396px;
+  margin: 35px 0 25px;
   padding: 30px 25px 0;
   flex-direction: column;
   border: 3px solid #ffffff;
@@ -84,10 +85,12 @@
   &__title {
     font-size: 20px;
     line-height: 1.2;
+    text-align: left;
   }
   &__price {
     margin: 5px 0 0;
     line-height: 1.18;
+    text-align: left;
     span {
       font-size: 24px;
       font-weight: bold;
@@ -98,6 +101,7 @@
     }
   }
   &__description {
+    text-align: left;
     font-size: 14px;
     color: #959494;
     line-height: 1.2;
@@ -135,3 +139,4 @@
 .m75 {
   margin-bottom: 75px;
 }
+

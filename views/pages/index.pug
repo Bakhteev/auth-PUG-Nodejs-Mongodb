@@ -2,6 +2,7 @@ extends ../layout/layout.pug
 
 block variables
   - const title = 'main page'
+  - const css = '/css/index.css'
 
 block content
   include ../components/header.pug
@@ -11,3 +12,5 @@ block content
     include ../components/listen.pug  
     include ../components/search.pug
     include ../components/premium.pug
+    include ../components/footer.pug
+  script(src="/js/index.js")

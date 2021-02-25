@@ -16,3 +16,5 @@ mongoose
   .catch((err) => console.log(err))
 
 app.get('/', (req, res) => res.render('pages/index'))
+app.get('/login', (req, res) => res.render('pages/login'))
+app.get('/signup', (req, res) => res.render('pages/signup'))

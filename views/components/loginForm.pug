@@ -1,0 +1,30 @@
+section.login
+  .container.h-100
+    .login__inner.flex.h-100
+      .login__card
+        button &times; 
+        h1.login__title What will you listen to today?
+        .row.login__row 
+          a(href="").login__link.login__link--blue.flex
+            img(src="/img/facebook.svg", alt="") 
+            span Facebook
+          a(href="").login__link.flex
+            img(src="/img/google.svg", alt="") 
+            span Google
+        form(action="").login__form.flex
+          label(for="login").flex.login__label.label
+            input(type="text" name="login", id="login").label__input
+            span.label__text Email address or username
+          label(for="password").flex.login__label.label
+            input(type="password" name="password", id='password').label__input
+            span.label__text Password
+          .row.login__row--bottom 
+            label(for="loginCheckbox").flex
+              input(type="checkbox", name="", id="loginCheckbox")
+              | Remember me
+            button(type="submit") Log in
+        .flex.login__text-block
+          a(href="#") Forgot your password?
+          span Don't have an account?
+          a(href="/signup") SIGN UP FOR MUSICBOX
+

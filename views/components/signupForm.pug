@@ -1,0 +1,39 @@
+section.signup
+  .container.h-100
+    .signup__inner.flex.h-100
+      .signup__card
+        button &times; 
+        h1.signup__title What will you listen to today?
+        .row.signup__row 
+          a(href="").signup__link.signup__link--blue.flex
+            img(src="/img/facebook.svg", alt="") 
+            span Facebook
+          a(href="").signup__link.flex
+            img(src="/img/google.svg", alt="") 
+            span Google
+        form(action="").signup__form.flex
+          label(for="email").flex.signup__label.label
+            input(type="text" name="email", id="email").label__input
+            span.label__text Email address
+          label(for="siguppassword").flex.signup__label.label
+            input(type="password" name="siguppassword", id='siguppassword').label__input
+            span.label__text Password
+          label(for="name").flex.signup__label.label
+            input(type="text" name="name", id="name").label__input
+            span.label__text Username
+          .row.signup__row--bottom 
+            label(for="loginCheckbox").flex
+              input(type="checkbox", name="", id="loginCheckbox")
+              | Remember me
+            button(type="submit") Log in
+            select(name="") 
+              option date of birthday
+              option date of birthday
+            select(name="")
+              option gender
+              option female
+              option male
+        .flex.signup__text-block
+          a(href="#") Forgot your password?
+          span Don't have an account?
+          a(href="/signup") SIGN UP FOR MUSICBOX

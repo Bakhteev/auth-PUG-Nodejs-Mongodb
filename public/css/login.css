@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  background: #161a1a;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container--small {
+  max-width: 872px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-5 {
+  width: 41.12%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-1 {
+  width: 8.88%;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: rgba(22, 26, 26, 0.3);
+}
+
+.header__row {
+  padding: 25px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav {
+  margin-right: 60px;
+}
+
+.header__item {
+  margin-right: 40px;
+  font-size: 18;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.header__item:last-child {
+  margin-right: 0;
+}
+
+.header__btn {
+  margin-right: 20px;
+  padding: 10px 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__btn:last-child {
+  margin-right: 0;
+}
+
+.header__btn:hover {
+  background: #ffffff;
+  color: #161a1a;
+}
+
+.login {
+  height: 100vh;
+}
+
+.login__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login__card {
+  width: 600px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 40px 86px;
+}
+
+.login__title {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.login__row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login__row--bottom {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login__link {
+  padding: 8px 60px 8px 30px;
+  border-radius: 20px;
+  border: 1px solid #121212;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.login__link--blue {
+  border-color: transparent;
+  background: #4267b2;
+  color: #fff;
+}
+
+.login__link img {
+  margin-right: 30px;
+}
+
+.login__form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__label {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__text-block {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__text {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.label__input {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.label__input:focus {
+  border-color: #2D9BEF;
+}

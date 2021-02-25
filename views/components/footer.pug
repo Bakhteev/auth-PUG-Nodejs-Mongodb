@@ -1,0 +1,51 @@
+mixin list(title, arr)
+  h6.footer__title #{title}
+  ul.footer__list
+    each item in arr
+      li.footer__item 
+        a(href=item.link) #{item.text}
+
+-const musicbox = [{link:'#', text:'About'},{link:'#', text:'Premium'},{link:'#', text:'Features'}]
+-const communities=[{link:'#', text:'For Artists'},{link:'#', text:'Developers'},{link:'#', text:'Press'}]
+-const usefulLinks=[{link:'#', text:'Help'},{link:'#', text:'Web Player'},{link:'#', text:'Explore Channels'},{link:'#', text:'Download App'}]
+-const social = [{link:'#', icon:'/img/facebook.png'},{link:'#', icon:'/img/twitter.png'},{link:'#', icon:'/img/inst.png'}]
+
+footer.footer
+  .container
+    .row.footer__row
+      .row 
+        .logo 
+          a(href="") 
+            img(src="/img/logo.png", alt="")
+        nav.row.footer__nav
+          .footer__musicbox
+            +list('MUSICBOX', musicbox)
+          .footer__communities
+            +list('COMMUNITIES',communities)
+          .footer__usefullinks 
+            +list('USEFUL LINKS',usefulLinks)
+      .footer__social 
+        ul.flex
+          each link in social
+            li.footer__icon
+              a(href=link.link) 
+                img(src=link.icon, alt="")
+    .row.footer__row.footer__row--bottom
+      ul.flex.privacy
+        li.privacy__item
+          a(href="#")  Legal
+        li.privacy__item
+          a(href="#")  Privacy
+        li.privacy__item
+          a(href="#")  Cookies
+        li.privacy__item
+          a(href="#")  Ads
+      .footer__lang.lang
+        h6.lang__value English (us)
+        ul.lang__list
+          li(data-lang="English (us)").lang__item English (us)
+          li(data-lang="Russian (ru)").lang__item Russian (ru)
+        span.footer__year © 2019 MusicBox
+
+    
+      

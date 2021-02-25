@@ -35,9 +35,13 @@ section.premium
           h6.list__title #{icon.title}
           span.list__description #{icon.description} 
     h6.premium__title--small Listen free or subscribe to MusicBox Premium.
-    .row.premium__row.premium__row--top  
-      +card('MusicBox Free','0.00',freeArr)
-      +card('MusicBox Premium',7.99,premiumArr,'Start with 1-month free trial*')
-    .row.premium__row.premium__row--bottom 
-      a(href="").premium__link GET MUSICBOX FREE
-      a(href="").premium__link.premium__link--premium GET MUSICBOX PREMIUM
+    .row.premium__row
+      .col-6.premium__col 
+        +card('MusicBox Free','0.00',freeArr)
+        a(href="").premium__link GET MUSICBOX FREE
+      .col-6.premium__col
+        +card('MusicBox Premium',7.99,premiumArr,'Start with 1-month free trial*')
+        a(href="").premium__link.premium__link--premium GET MUSICBOX PREMIUM
+
+
+      
