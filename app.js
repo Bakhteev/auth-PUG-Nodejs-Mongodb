@@ -16,7 +16,6 @@ mongoose
   .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((results) => app.listen(3001))
   .catch((err) => console.log(err))
-  
 
 app.get('/', (req, res) => res.render('pages/index'))
 

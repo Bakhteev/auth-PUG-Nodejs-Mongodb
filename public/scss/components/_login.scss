@@ -5,11 +5,11 @@
     justify-content: center;
   }
   &__card {
-    width: 600px;
+    max-width: 600px;
     background: #fff;
     color: #000;
     border-radius: 8px;
-    padding: 40px 86px;
+    padding: 40px 87px;
   }
   &__title {
     font-size: 28px;
@@ -19,14 +19,39 @@
     margin-bottom: 45px;
   }
   &__row {
-    justify-content: space-around;
+    margin: 0 -10px;
+    justify-content: center;
     &--bottom {
       margin: 20px 0;
       justify-content: space-between;
+      align-items: center;
+      .row {
+        align-items: center;
+      }
+      label[for='loginCheckbox'] {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #99999f;
+        padding-left: 34px;
+        cursor: pointer;
+        &::before {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          content: '';
+          width: 24px;
+          height: 24px;
+          background: #fff;
+          border: 1px solid #ababab;
+          border-radius: 4px;
+        }
+      }
     }
   }
   &__link {
     padding: 8px 60px 8px 30px;
+    margin: 0 10px;
     border-radius: 20px;
     border: 1px solid #121212;
     align-items: center;
@@ -53,19 +78,22 @@
     align-items: center;
   }
   &__btn {
-    width: 207px;
-    padding: 12px 0;
-    background: #2d9bef;
-    border-radius: 20px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px 0;
+    font-size: 16px;
     font-weight: bold;
     line-height: 1.2;
-    color: #fff;
+    text-align: center;
+    border: 1px solid #161a1a;
+    border-radius: 20px;
   }
   &__forgot {
     line-height: 1.2;
     font-size: 12px;
     text-align: center;
     color: #2d9bef;
+    margin-bottom: 52px;
   }
 }
 .label {
@@ -81,6 +109,7 @@
     line-height: 1.2;
   }
   &__input {
+    min-width: 426px;
     padding: 20px 20px 15px;
     border: 1px solid black;
     border-radius: 4px;
@@ -99,11 +128,33 @@
       }
     }
   }
+  &__checkbox {
+    display: none;
+    &:checked {
+      + label[for='loginCheckbox'] {
+        &::before {
+          background: url('../img/checkbox.svg') no-repeat center;
+          border: none;
+        }
+      }
+    }
+  }
   &.active {
     .label__text {
       top: 20%;
       font-size: 11px;
       color: #898b91;
     }
+  }
+}
+.form {
+  &__btn {
+    width: 207px;
+    padding: 12px 0;
+    background: #2d9bef;
+    border-radius: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
   }
 }
