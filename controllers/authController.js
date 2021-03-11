@@ -49,7 +49,7 @@ const Login_post = async (req, res) => {
     res.status(201).json({ user: user._id })
   } catch (err) {
     const errors = handleErrors(err)
-    res.status(400).json({ err })
+    res.status(400).json({ errors })
   }
 }
 
@@ -64,4 +64,9 @@ const SignUP_post = async (req, res) => {
     res.status(400).json({ errors })
   }
 }
-module.exports = { Login_get, SignUP_get, Login_post, SignUP_post }
+
+const LogOut_get = (req, res) => {
+  res.cookie('user', '', {maxAge: 1})
+  res.redirect('/')
+}
+module.exports = { Login_get, SignUP_get, Login_post, SignUP_post, LogOut_get }

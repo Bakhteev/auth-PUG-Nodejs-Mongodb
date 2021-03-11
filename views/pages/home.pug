@@ -3,6 +3,21 @@ extends ../layout/layout.pug
 block variables
   - const title = 'Home page'
   - const css = '/css/index.css'
+  - const links = [{link:'', text:'1'},{link:'', text:'2'},{link:'', text:'3'},{link:'/settings', text:'settings'}]
 
 block content 
-  h1 это home page 
+  .container
+    .row(style="justify-content:space-between;")
+      .flex
+        h1 это home page
+      .flex(style="align-items:center;")
+        a(href="/logout" style="border-radius: 16px; padding:5px 10px; border: 1px solid white; justify-content:center; align-items:center;").home__btn.flex.logout Log out 
+        if user
+          h6.home__title #{user.username}
+            ul.home__list
+              each item in links
+                li.home__item
+                  a.home__link(href=item.link) #{item.text}
+        
+
+  script(src="/js/home.js")

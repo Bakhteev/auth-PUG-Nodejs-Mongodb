@@ -1,0 +1,27 @@
+.home {
+  &__title {
+    margin-left: 20px;
+    position: relative;
+  }
+  &__list {
+    width: 50px;
+    height: auto;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background: grey;
+    padding: 10px;
+    border-radius: 16px;
+    transition: 0.3s;
+    &.active {
+      display: block;
+    }
+  }
+  &__item {
+    padding: 5px 0;
+    cursor: pointer;
+    &:hover {
+      background: black;
+    }
+  }
+}

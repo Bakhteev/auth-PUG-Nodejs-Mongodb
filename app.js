@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const authRouter = require('./routes/authRoutes')
-const { requireAuth } = require('./middlewares/authMiddleware')
+const { requireAuth, checkUser } = require('./middlewares/authMiddleware')
 const cookieParser = require('cookie-parser')
 
 const dbURL =
@@ -10,14 +10,16 @@ const dbURL =
 const app = express()
 
 app.set('view engine', 'pug')
-
 app.use(express.static('public'))
 app.use(express.json())
+app.use(cookieParser())
 
 mongoose
   .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((results) => app.listen(3001))
   .catch((err) => console.log(err))
+
+app.get('*', checkUser)
 
 app.get('/', (req, res) => res.render('pages/index'))
 

@@ -8,6 +8,8 @@ header.header
           img(src="/img/logo.png", alt="").logo__img
       .header__right.flex 
         nav.header__nav 
+          if user
+            h1 #{user.email}
           ul.flex
             each item in items
               li.header__item
