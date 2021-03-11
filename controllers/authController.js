@@ -3,7 +3,13 @@ const jwt = require('jsonwebtoken')
 
 const handleErrors = (err) => {
   let errors = { email: '', password: '', username: '' }
-  console.log(err)
+  if (err.message === 'Такого аккаунта не существует') {
+    errors.email = 'Эта почта еще не была зарегистрирована в системе'
+  }
+  if (err.message === 'Пароль неправильный') {
+    errors.password = 'Неверный пароль'
+  }
+
   if (err.keyValue.username) {
     errors.username = 'Такой пользователь уже был создан'
     return errors
@@ -23,7 +29,7 @@ const handleErrors = (err) => {
 const maxAge = 3 * 24 * 60 * 60
 
 const createToken = (id) => {
-  return jwt.sign({ id }, 'jwt', { expiresIn: maxAge })
+  return jwt.sign({ id }, 'секретный ключ', { expiresIn: maxAge })
 }
 
 const Login_get = (req, res) => {
@@ -35,13 +41,15 @@ const SignUP_get = (req, res) => {
 }
 
 const Login_post = async (req, res) => {
+  const { email, password } = req.body
   try {
-    const user = await User.login({ ...req.body })
-    rres.cookie('jwt', token, { httpOnly: true })
-    console.log(req.body)
-    res.send('Это страница Логина POST')
+    const user = await User.login(email, password)
+    const token = createToken(user._id)
+    res.cookie('user', token, { httpOnly: true })
+    res.status(201).json({ user: user._id })
   } catch (err) {
-    console.log(err)
+    const errors = handleErrors(err)
+    res.status(400).json({ err })
   }
 }
 
@@ -56,5 +64,4 @@ const SignUP_post = async (req, res) => {
     res.status(400).json({ errors })
   }
 }
-
 module.exports = { Login_get, SignUP_get, Login_post, SignUP_post }

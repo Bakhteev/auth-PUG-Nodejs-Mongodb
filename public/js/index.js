@@ -1,7 +1,6 @@
 const h6 = document.querySelector('h6.lang__value')
 const items = document.querySelectorAll('.lang__item')
 const list = document.querySelector('.lang__list')
-console.log(h6, items)
 
 const dropdown = (item) => {
   list.classList.remove('active')
