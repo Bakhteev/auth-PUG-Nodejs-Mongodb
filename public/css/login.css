@@ -205,11 +205,11 @@ input {
 }
 
 .login__card {
-  width: 600px;
+  max-width: 600px;
   background: #fff;
   color: #000;
   border-radius: 8px;
-  padding: 40px 86px;
+  padding: 40px 87px;
 }
 
 .login__title {
@@ -221,8 +221,10 @@ input {
 }
 
 .login__row {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  margin: 0 -10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .login__row--bottom {
@@ -230,10 +232,41 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__row--bottom .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__row--bottom label[for='loginCheckbox'] {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #99999f;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.login__row--bottom label[for='loginCheckbox']::before {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border: 1px solid #ababab;
+  border-radius: 4px;
 }
 
 .login__link {
   padding: 8px 60px 8px 30px;
+  margin: 0 10px;
   border-radius: 20px;
   border: 1px solid #121212;
   -webkit-box-align: center;
@@ -278,13 +311,15 @@ input {
 }
 
 .login__btn {
-  width: 207px;
-  padding: 12px 0;
-  background: #2d9bef;
-  border-radius: 20px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 0;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1.2;
-  color: #fff;
+  text-align: center;
+  border: 1px solid #161a1a;
+  border-radius: 20px;
 }
 
 .login__forgot {
@@ -292,6 +327,7 @@ input {
   font-size: 12px;
   text-align: center;
   color: #2d9bef;
+  margin-bottom: 52px;
 }
 
 .label {
@@ -314,6 +350,7 @@ input {
 }
 
 .label__input {
+  min-width: 426px;
   padding: 20px 20px 15px;
   border: 1px solid black;
   border-radius: 4px;
@@ -336,8 +373,27 @@ input {
   color: #898b91;
 }
 
+.label__checkbox {
+  display: none;
+}
+
+.label__checkbox:checked + label[for='loginCheckbox']::before {
+  background: url("../img/checkbox.svg") no-repeat center;
+  border: none;
+}
+
 .label.active .label__text {
   top: 20%;
   font-size: 11px;
   color: #898b91;
+}
+
+.form__btn {
+  width: 207px;
+  padding: 12px 0;
+  background: #2d9bef;
+  border-radius: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
 }

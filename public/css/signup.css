@@ -205,7 +205,7 @@ input {
 }
 
 .signup__card {
-  width: 600px;
+  max-width: 600px;
   background: #fff;
   color: #000;
   border-radius: 8px;
@@ -221,8 +221,10 @@ input {
 }
 
 .signup__row {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -10px;
 }
 
 .signup__row--bottom {
@@ -233,6 +235,7 @@ input {
 
 .signup__link {
   padding: 8px 60px 8px 30px;
+  margin: 0 10px;
   border-radius: 20px;
   border: 1px solid #121212;
   -webkit-box-align: center;
@@ -320,6 +323,7 @@ input {
 }
 
 .label__input {
+  min-width: 426px;
   padding: 20px 20px 15px;
   border: 1px solid black;
   border-radius: 4px;

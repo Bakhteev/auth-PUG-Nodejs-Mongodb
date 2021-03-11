@@ -5,7 +5,7 @@
     justify-content: center;
   }
   &__card {
-    width: 600px;
+    max-width: 600px;
     background: #fff;
     color: #000;
     border-radius: 8px;
@@ -19,13 +19,15 @@
     margin-bottom: 45px;
   }
   &__row {
-    justify-content: space-around;
+    justify-content: center;
+    margin: 0 -10px;
     &--bottom {
       justify-content: space-between;
     }
   }
   &__link {
     padding: 8px 60px 8px 30px;
+    margin: 0 10px;
     border-radius: 20px;
     border: 1px solid #121212;
     align-items: center;
@@ -84,6 +86,7 @@
     line-height: 1.2;
   }
   &__input {
+    min-width: 426px;
     padding: 20px 20px 15px;
     border: 1px solid black;
     border-radius: 4px;
