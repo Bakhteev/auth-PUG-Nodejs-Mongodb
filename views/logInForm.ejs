@@ -1,0 +1,70 @@
+<section class="login">
+  <div class="container h-100">
+    <div class="login__content h-100">
+      <div class="login__card">
+        <h1 class="login__title">What will you listen to today?</h1>
+        <div class="login__row row">
+          <a href="" class="login__link"><img src="/images/login/Facebook.svg" alt="" /></a>
+          <a href="" class="login__link"><img src="/images/login/Google.svg" alt="" /></a>
+        </div>
+        <form action="" class="login__form">
+          <label for="login" class="login__label">
+            <input type="text" class="login__input" name="email" id="login" />
+            <span class="login__text email">Email address</span>
+          </label>
+          <label for="password" class="login__label">
+            <input type="password" class="login__input" name="password" id="password" />
+            <span class="login__text password">Password</span>
+          </label>
+          <button type="submit" class="login__btn">LOG IN</button>
+        </form>
+        <div class="login__row--bottom row">
+          <label for="">
+            <input type="checkbox" />
+          </label>
+        </div>
+        <div class="login__box-text">
+          <span class="login__forgot">Forgot your password?</span>
+          <span class="">Don't have an account?</span>
+          <a href="/signup">SIGN UP FOR MUSICBOX</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.querySelector('.login__form');
+
+  const passwordError = document.querySelector('.login__text.password');
+  const emailError = document.querySelector('.login__text.email');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = form.email.value;
+    const password = form.password.value;
+
+    try {
+      const res = await fetch('/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      const data = await res.json();
+
+      console.log(data);
+
+      if (data.errors) {
+        passwordError.innerHTML = data.errors.password;
+        emailError.innerHTML = data.errors.email;
+      }
+      if (data.user) {
+        // location.assign('/home');
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
+</script>
