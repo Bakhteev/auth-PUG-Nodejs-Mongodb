@@ -1,0 +1,30 @@
+<svg
+  class="avatar__plus"
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="20"
+  viewBox="0 0 20 20"
+  >
+  <g
+    id="Сгруппировать_1164"
+    data-name="Сгруппировать 1164"
+    transform="translate(-205 -128)"
+  >
+    <rect
+      id="Прямоугольник_2848"
+      data-name="Прямоугольник 2848"
+      width="20"
+      height="20"
+      rx="10"
+      transform="translate(205 128)"
+      fill="#fff"
+    />
+    <path
+      id="Объединение_54"
+      data-name="Объединение 54"
+      d="M-3981.5,1324v-4.249h-4.25v-1.5h4.25V1314h1.5v4.251h4.25v1.5H-3980V1324Z"
+      transform="translate(4195.75 -1180.998)"
+      fill="#313131"
+    />
+  </g>
+</svg>

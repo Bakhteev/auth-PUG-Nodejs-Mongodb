@@ -665,3 +665,74 @@ input {
 .home__item:hover {
   background: black;
 }
+
+.settings__container {
+  padding-top: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.setting__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user__name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.user__account-type {
+  color: #99999f;
+  font-size: 16;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.avatar {
+  position: relative;
+  margin-right: 20px;
+  background-color: #313131;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.avatar__plus {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.settings__premium {
+  padding: 12px 36px;
+  color: #fff;
+  border-radius: 40px;
+  background: -webkit-gradient(linear, right top, left top, from(#9b2def), color-stop(#2d9bef), to(#35edfb));
+  background: -webkit-linear-gradient(right, #9b2def, #2d9bef, #35edfb);
+  background: -o-linear-gradient(right, #9b2def, #2d9bef, #35edfb);
+  background: linear-gradient(to left, #9b2def, #2d9bef, #35edfb);
+}

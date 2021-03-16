@@ -1,0 +1,35 @@
+extends ../layout/layout.pug
+
+block variables
+  - const title = 'Main page'
+  - const css = '/css/index.css'
+
+block content
+  include ../components/header.pug
+  main
+    .container(style="margin-top:100px;")
+      section
+        .settings__container
+          .setting__profile
+            form(method="POST" enctype="multipart/form-data" action="/upload").settings__avatar.avatar
+              input(type="file" name="myPhoto" style="opacity:1; position: absolute; z-index: 2; cursor: pointer; max-width:100%;")
+              img(src="/img/avatar.svg", alt="")
+              img(src="/img/avatar-plus.svg", alt="")
+              button(type="submit" style="margin-left: 50px; postion:absolute;") upload image
+            .settings__user.user
+              h3.user__name John Doe
+              span.user__account-type Free Account
+          button.settings__premiumGO TO PREMIUM
+      .row(style="margin-top:100px; ")
+        div
+          form(action="" style="display: flex; flex-direction:column;")
+            label(for="" style="border: 1px solid white; display:flex; color:white;") Name
+              input(type="text" name="" id="")  
+            label(for="" style="border: 1px solid white; display:flex; color:white;") Photo
+              input(type="text" name="" id="") 
+            label(for="" style="border: 1px solid white; display:flex; color:white;") Password 
+              input(type="text" name="" id="") 
+            label(for="" style="border: 1px solid white; display:flex; color:white;") Confirm password
+              input(type="text" name="" id="") 
+    include ../components/footer.pug
+  script(src="/js/index.js")
